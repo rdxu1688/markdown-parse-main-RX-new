@@ -100,7 +100,7 @@ public class MarkdownParseTest {
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         List<String> realLinks = List.of("a link on the first line");
-        assertEquals(realLinks, links);
+        assertEquals(realLinks, links);  
     }
 
     @Test
