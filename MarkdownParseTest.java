@@ -9,25 +9,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MarkdownParseTest {
-    @Test
-    public void addition() {
-        assertEquals(99999999, 1 + 1);
-    }
 
     @Test
-    public void testFile1() throws IOException {
+    public void testFile1() throws IOException { //failed
         String contents= Files.readString(Path.of("./test-file.md"));
         List<String> expect = List.of("https://something.com", "some-page.html");
         assertEquals(MarkdownParse.getLinks(contents), expect);
     }
 
     @Test
-    public void addition2() {
+    public void addition() {
         assertEquals(2, 1 + 1);
     }
 
     @Test
-    public void testGetLinks() throws IOException {
+    public void testGetLinks() throws IOException { //failed
         Path fileName = Path.of("test-file.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
@@ -36,7 +32,7 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void testGetLinksBreaking() throws IOException {
+    public void testGetLinksBreaking() throws IOException { //failed
         Path fileName = Path.of("breaking_tests.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
