@@ -22,7 +22,7 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void addition() {
+    public void addition2() {
         assertEquals(2, 1 + 1);
     }
 
